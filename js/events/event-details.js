@@ -62,11 +62,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Redirect to edit page
   editButton.addEventListener("click", () => {
-    window.location.href = `../../pages/events/edit-event.html?eventId=${event_id}`;
+    window.location.href = `../../pages/events/edit-event.html`;
   });
 
   function deleteEvent() {
-    window.location.href = `../../pages/events/delete-event.html?eventId=${event_id}`;
+    window.location.href = `../../pages/events/delete-event.html`;
   }
 
   deleteButton.addEventListener("click", deleteEvent)

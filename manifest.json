@@ -8,22 +8,22 @@
   "start_url": ".",
   "icons": [
     {
-      "src": "/assets/images/ios/100.png",
+      "src": "/Fambly/assets/images/ios/100.png",
       "sizes": "100x100",
       "type": "image/png"
     },
     {
-      "src": "/assets/images/ios/144.png",
+      "src": "/Fambly/assets/images/ios/144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "/assets/images/ios/256.png",
+      "src": "/Fambly/assets/images/ios/256.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "/assets/images/ios/512.png",
+      "src": "/Fambly/assets/images/ios/512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

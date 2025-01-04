@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       `;
 
         li.addEventListener("click", () => {
-          window.location.href = `../../pages/events/event-details.html?eventId=${event.id}`;
+          window.location.href = `../../pages/events/event-details.html`;
         });
 
         eventsList.appendChild(li);
@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       `;
 
         li.addEventListener("click", () => {
-          window.location.href = `../../pages/tasks/task-info.html?taskId=${task.id}`;
+          window.location.href = `../../pages/tasks/task-info.html`;
         });
 
         eventsList.appendChild(li);
