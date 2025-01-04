@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Удаление задачи</title>
+    <link rel="stylesheet" href="../../css/tasks/delete-task.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/icons/favicon.ico">
+    <script>
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    </script>
+</head>
+<body>
+<div class="container">
+    <h1>Удаление задачи</h1>
+    <p id="taskTitle">Вы уверены, что хотите удалить задачу?</p>
+    <div class="actions">
+        <button class="cancel-btn" onclick="cancelDeletion()">Отмена</button>
+        <button class="confirm-btn" id="confirmDeleteBtn">Удалить</button>
+    </div>
+</div>
+<script type="module" src="../../js/tasks/delete-task.js"></script>
+<script type="module" src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+.tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+    border-bottom: var(--tab-color-active);
+}
+
+.tab-button {
+    flex: 1 1 48%;
+    background-color: var(--tab-color);
+    border-radius: 4px 4px 0 0;
+    font-size: var(--font-size);
+}
+
+.tab-button:hover {
+    background-color: var(--tab-color-hover);
+}
+
+.tab-button.active {
+    background-color: var(--tab-color-active);
+}
+
+/* Контент табов */
+.tab-content {
+    display: none;
+}
+
+.tab-content label {
+    margin-bottom: 8px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+
+#cancelButton {
+    background-color: var(--cancel-button-background-color);
+}
+
+#cancelButton:hover {
+    background-color: var(--cancel-button-hover-color);
+}
+
+
+button.hidden {
+    display: none;
+}
+
+#cancelBtn {
+    background-color: var(--cancel-button-background-color);
+}
+
+#cancelBtn:hover {
+    background-color: var(--cancel-button-hover-color);
+}
+
+.logout {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.logout .delete-account-btn {
+    background-color: var(--delete-button-background-color);
+}
+
+.logout .delete-account-btn:hover {
+    background-color: var(--delete-button-hover-color);
+}

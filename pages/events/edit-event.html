@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактировать событие</title>
+    <link rel="stylesheet" href="../../css/events/edit-event.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/icons/favicon.ico">
+    <script>
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <button type="button" id="cancelEdit" class="cancel-btn">Назад</button>
+        <h3>Редактирование</h3>
+    </div>
+
+    <div>
+        <form id="editEventForm" class="form">
+            <div class="form-group">
+                <label for="title">Название:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+
+            <div class="form-group">
+                <label for="description">Описание:</label>
+                <textarea id="description" name="description" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="participants">Участники:</label>
+                <select id="participants" name="participants" multiple></select>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Место:</label>
+                <input type="text" id="location" name="location">
+            </div>
+
+            <div class="form-group">
+                <label for="startDateTime">Дата и время начала:</label>
+                <input type="datetime-local" id="startDateTime" name="startDateTime" required>
+            </div>
+
+            <div class="form-group" id="endDateTimeGroup">
+                <label for="endDateTime">Дата и время окончания:</label>
+                <input type="datetime-local" id="endDateTime" name="endDateTime" required>
+            </div>
+
+            <div class="form-group last">
+                <label for="isRecurring">Повторяющееся событие:</label>
+                <input type="checkbox" id="isRecurring" name="isRecurring">
+            </div>
+
+            <div id="recurringOptions" class="hidden">
+                <div class="form-group">
+                    <label for="recurringType">Тип повтора:</label>
+                    <select id="recurringType" name="recurringType">
+                        <option value="daily">День</option>
+                        <option value="weekly">Неделя</option>
+                    </select>
+                </div>
+
+                <div id="dailyOptions" class="recurring-options hidden">
+                    <label for="dailyInterval">Повторять каждые:</label>
+                    <input type="number" id="dailyInterval" name="dailyInterval" min="1" value="1">
+                    <label>дней</label>
+                </div>
+
+                <div id="weeklyOptions" class="recurring-options hidden">
+                    <label for="weeklyInterval">Повторять каждые:</label>
+                    <input type="number" id="weeklyInterval" name="weeklyInterval" min="1" value="1">
+                    <label>недель</label>
+                    <fieldset>
+                        <legend>Дни недели</legend>
+                        <label><input type="checkbox" name="weekdays" value="Mon"> Пн</label>
+                        <label><input type="checkbox" name="weekdays" value="Tue"> Вт</label>
+                        <label><input type="checkbox" name="weekdays" value="Wed"> Ср</label>
+                        <label><input type="checkbox" name="weekdays" value="Thu"> Чт</label>
+                        <label><input type="checkbox" name="weekdays" value="Fri"> Пт</label>
+                        <label><input type="checkbox" name="weekdays" value="Sat"> Сб</label>
+                        <label><input type="checkbox" name="weekdays" value="Sun"> Вс</label>
+                    </fieldset>
+                </div>
+
+                <div class="form-group">
+                    <label class="endRepeat" for="recurringEnd">Дата окончания повтора:</label>
+                    <input type="date" id="recurringEnd" name="recurringEnd">
+                    <button type="button" id="clearEndDate">Очистить дату</button>
+                </div>
+
+                <p id="recurringSummary">Настройте параметры повтора.</p>
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="save-btn">Сохранить</button>
+            </div>
+        </form>
+
+    </div>
+
+
+
+</div>
+
+<script type="module" src="../../js/events/edit-event.js"></script>
+<script type="module" src="../../js/main.js"></script>
+</body>
+</html>

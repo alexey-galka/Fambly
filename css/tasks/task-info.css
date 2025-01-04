@@ -1,0 +1,28 @@
+/* Стили секций */
+section {
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+
+.actions button {
+    width: 100%;
+}
+
+.delete-btn {
+    background-color: var(--delete-button-background-color);
+}
+
+.delete-btn:hover {
+    background-color: var(--delete-button-hover-color);
+}

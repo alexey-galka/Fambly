@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задачи</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/tasks/tasks.css">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/icons/favicon.ico">
+    <script>
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <button class="back-btn" onclick="goToDashboard()">Назад</button>
+        <h1>Задачи</h1>
+        <button class="create-task-btn" onclick="window.location.href='create-task.html'">Добавить</button>
+    </div>
+
+    <div>
+        <!-- Разделы задач -->
+        <section class="task-section">
+            <h2 class="accordion-header" onclick="toggleSection('toDoTasks')">
+                To Do <span id="toDoCount">(0)</span>
+            </h2>
+            <ul id="toDoTasks" class="task-list"></ul>
+        </section>
+
+        <section class="task-section">
+            <h2 class="accordion-header" onclick="toggleSection('inProgressTasks')">
+                In Progress <span id="inProgressCount">(0)</span>
+            </h2>
+            <ul id="inProgressTasks" class="task-list"></ul>
+        </section>
+
+        <section class="task-section">
+            <h2 class="accordion-header" onclick="toggleSection('completedTasks')">
+                Completed <span id="completedCount">(0)</span>
+            </h2>
+            <ul id="completedTasks" class="task-list"></ul>
+        </section>
+
+        <section class="task-section">
+            <h2 class="accordion-header" onclick="toggleSection('overdueTasks')">
+                Overdue <span id="overdueCount">(0)</span>
+            </h2>
+            <ul id="overdueTasks" class="task-list"></ul>
+        </section>
+    </div>
+
+
+</div>
+
+<script type="module" src="../../js/tasks/tasks.js"></script>
+<script type="module" src="../../js/main.js"></script>
+</body>
+</html>

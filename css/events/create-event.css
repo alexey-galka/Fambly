@@ -1,0 +1,94 @@
+.form {
+    padding-bottom: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.last {
+    display: flex;
+    align-items: center;
+}
+
+/* Повторяющиеся события */
+#isRecurring {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: var(--background-color);
+    border: var(--border-color);
+    border-radius: 5px;
+}
+
+#isRecurring:checked {
+    background-color: var(--accent-color);
+    border: var(--border-color);
+}
+
+.recurring-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 8px;
+}
+
+.recurring-options label {
+    font-size: var(--font-size);
+    font-weight: 600;
+    color: var(--text-color);
+    /*margin-bottom: 5px;*/
+}
+
+.recurring-options input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    /*background-color: var(--background-color);*/
+    border: var(--border-color);
+    border-radius: 5px;
+}
+
+.recurring-options input[type="checkbox"]:checked {
+    background-color: var(--accent-color);
+    border: var(--border-color);
+}
+
+.hidden {
+    display: none;
+}
+
+
+fieldset {
+    border: none;
+    padding: 0;
+    /*margin: 20px 0;*/
+    /*background-color: var(--background-color);*/
+    border-radius: 8px;
+    outline: none;
+    display: flex;
+    flex-direction: row;
+}
+
+fieldset label {
+    text-align: center;
+}
+
+legend {
+    font-size: var(--font-size);
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 3px solid var(--accent-color);
+}
+
+.endRepeat {
+    margin-top: 10px;
+}

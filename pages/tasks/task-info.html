@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Детали задачи</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/tasks/task-info.css">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/icons/favicon.ico">
+  <script>
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  </script>
+</head>
+<body>
+<div class="container">
+
+  <div class="page-header">
+    <button class="back-button" id="backButton">Назад</button>
+    <h1>Детали задачи</h1>
+  </div>
+  <div>
+    <section>
+      <p><strong>Название:</strong> <span id="taskTitle">—</span></p>
+      <p><strong>Описание:</strong> <span id="taskDescription">—</span></p>
+      <p><strong>Срок:</strong> <span id="taskDueDate">—</span></p>
+      <p><strong>Ответственный:</strong> <span id="taskAssignee">—</span></p>
+    </section>
+    <section>
+      <p>
+        <strong>Статус:</strong>
+        <select id="taskStatus" onchange="updateTaskStatus(this.value)">
+          <option value="To Do">To Do</option>
+          <option value="In Progress">In Progress</option>
+          <option value="Completed">Completed</option>
+        </select>
+      </p>
+    </section>
+    <section class="actions">
+      <button class="edit-btn" id="editButton">Редактировать</button>
+      <button class="delete-btn" id="deleteButton">Удалить</button>
+    </section>
+  </div>
+
+
+</div>
+
+<script type="module" src="../../js/tasks/task-info.js"></script>
+<script type="module" src="../../js/main.js"></script>
+</body>
+</html>

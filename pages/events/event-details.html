@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детали события</title>
+    <link rel="stylesheet" href="../../css/events/event-details.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/icons/favicon.ico">
+    <script>
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    </script>
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header">
+        <button class="back-button" onclick="goBack()">Назад</button>
+        <h3>Детали события</h3>
+    </div>
+
+    <div id="event-details">
+        <h1 id="event-title">Название события</h1>
+        <p><strong>Описание:</strong> <span id="event-description"></span></p>
+        <p><strong>Дата:</strong> <span id="event-start-date"></span></p>
+        <p><strong>Время:</strong> <span id="event-start-time"></span></p>
+        <p><strong>Локация:</strong> <span id="event-location"></span></p>
+        <p><strong>Создано:</strong> <span id="event-created-by"></span></p>
+        <p><strong>Участники:</strong> <span id="event-participants"></span></p>
+    </div>
+    <div class="actions">
+        <button id="edit-event" class="btn">Редактировать</button>
+        <button id="delete-event" class="btn danger">Удалить</button>
+    </div>
+
+</div>
+<script type="module" src="../../js/events/event-details.js"></script>
+<script type="module" src="../../js/main.js"></script>
+</body>
+</html>

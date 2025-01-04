@@ -1,0 +1,24 @@
+.container {
+    justify-content: space-between;
+}
+
+.page-header {
+    justify-content: center;
+}
+
+
+.links {
+    padding-top: 20px;
+    font-size: var(--font-size);
+    text-align: center;
+    /*padding-bottom: 20px;*/
+}
+
+.forgot-password, .register-link {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.forgot-password:hover, .register-link:hover {
+    text-decoration: underline;
+}

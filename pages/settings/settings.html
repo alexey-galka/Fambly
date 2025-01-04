@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="settingsTitle">Настройки</title>
+  <link rel="stylesheet" href="../../css/settings/settings.css">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/icons/favicon.ico">
+  <script>
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  </script>
+</head>
+<body>
+<div class="container">
+  <!-- Верхняя панель -->
+  <div class="page-header">
+    <button data-i18n="goBackButton" class="back-button" onclick="goBack()">Назад</button>
+    <h3 data-i18n="settingsTitle" class="settings-title">Настройки</h3>
+  </div>
+
+  <!-- Табы -->
+  <div class="tabs">
+    <button data-i18n="personalInfo" class="tab-button active" data-tab="personalInfo">Личные данные</button>
+    <button data-i18n="personalization" class="tab-button" data-tab="personalization">Персонализация</button>
+    <button data-i18n="privacySection" class="tab-button" data-tab="security">Безопасность</button>
+  </div>
+
+  <!-- Контент табов -->
+  <!-- Личные данные -->
+  <div class="tab-content active" id="personalInfo">
+    <form id="settingsForm">
+      <div class="form-group">
+        <label data-i18n="emailLabel" for="email">Почта:</label>
+        <input type="email" id="email" name="email" disabled>
+      </div>
+      <div class="form-group">
+        <label data-i18n="firstNameLabel" for="first_name">Имя:</label>
+        <input type="text" id="first_name" name="first_name" disabled>
+      </div>
+      <div class="form-group">
+        <label data-i18n="lastNameLabel" for="last_name">Фамилия:</label>
+        <input type="text" id="last_name" name="last_name" disabled>
+      </div>
+      <div class="form-group">
+        <label data-i18n="birthDateLabel" for="birth_date">Дата рождения:</label>
+        <input type="date" id="birth_date" name="birth_date" disabled>
+      </div>
+      <div class="buttons">
+        <button data-i18n="editButton" type="button" id="editButton">Изменить</button>
+        <button data-i18n="saveButton" type="button" id="saveButton" class="hidden">Сохранить</button>
+        <button data-i18n="cancelButton" type="button" id="cancelButton" class="hidden">Отменить</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Персонализация -->
+  <div class="tab-content" id="personalization">
+    <label data-i18n="themeLabel">
+      Тема:
+      <select id="themeSelect">
+        <option data-i18n="lightTheme" value="light">Светлая тема</option>
+        <option data-i18n="darkTheme" value="dark">Тёмная тема</option>
+      </select>
+    </label>
+    <br>
+<!--    <label data-i18n="languageLabel">-->
+<!--      Язык:-->
+<!--      <select id="languageSelect">-->
+<!--        <option data-i18n="ruLang" value="ru">Русский</option>-->
+<!--        <option data-i18n="enLang" value="en">English</option>-->
+<!--      </select>-->
+<!--    </label>-->
+  </div>
+
+  <!-- Безопасность -->
+  <div class="tab-content" id="security">
+    <div class="password-form">
+      <form id="changePasswordForm">
+        <div class="form-group">
+          <label data-i18n="currentPasswordLabel" for="currentPassword">Текущий пароль:</label>
+          <input type="password" id="currentPassword" name="currentPassword" required disabled>
+        </div>
+        <div class="form-group">
+          <label data-i18n="newPasswordLabel" for="newPassword">Новый пароль:</label>
+          <input type="password" id="newPassword" name="newPassword" required disabled>
+        </div>
+        <div class="form-group">
+          <label data-i18n="confirmNewPasswordLabel" for="confirmPassword">Подтвердите новый пароль:</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required disabled>
+        </div>
+        <div class="buttons">
+          <button data-i18n="editButton" type="button" id="editBtn">Изменить</button>
+          <button data-i18n="saveButton" type="button" id="saveBtn" class="hidden">Сохранить</button>
+          <button data-i18n="cancelButton" type="button" id="cancelBtn" class="hidden">Отменить</button>
+        </div>
+      </form>
+      <div class="logout">
+        <button data-i18n="logoutButton" class="logout-btn" id="logout">Выйти из аккаунта</button>
+        <button data-i18n="deleteAccountButton" class="delete-account-btn" onclick="deleteAccount()">Удалить аккаунт</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Скрипт переключения табов -->
+<script>
+  const tabButtons = document.querySelectorAll('.tab-button');
+  const tabContents = document.querySelectorAll('.tab-content');
+
+  tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Убираем active у всех табов и контента
+      tabButtons.forEach(btn => btn.classList.remove('active'));
+      tabContents.forEach(content => content.classList.remove('active'));
+
+      // Добавляем active текущему табу и контенту
+      button.classList.add('active');
+      const targetTabContent = document.getElementById(button.dataset.tab);
+      if (targetTabContent) {
+        targetTabContent.classList.add('active');
+      }
+    });
+  });
+</script>
+<script type="module" src="../../js/settings/settings.js"></script>
+<script type="module" src="../../js/main.js"></script>
+</body>
+</html>

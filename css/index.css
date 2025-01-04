@@ -1,0 +1,35 @@
+body {
+    text-align: center;
+}
+
+.container {
+    justify-content: space-evenly;
+}
+
+.actions {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Кнопки */
+.actions .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    text-decoration: none;
+    font-size: var(--font-size);
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.actions .button:hover {
+    background-color: var(--button-hover-color);
+    color: var(--button-text-color);
+}

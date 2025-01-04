@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Дашборд</title>
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/dashboard/dashboard.css">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/icons/favicon.ico">
+  <script>
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  </script>
+</head>
+<body>
+<div class="container">
+  <div class="page-header">
+    <div class="welcome">
+      <h3>Добро пожаловать, <span id="userName">...</span>!</h3>
+    </div>
+    <div class="summary">
+      <p class="task_assigned">Задач назначено: <span id="taskCount">0</span></p>
+    </div>
+  </div>
+
+  <div>
+    <!-- Карточки с информацией -->
+    <section class="dashboard-info">
+      <div class="dashboard-card">
+        <h3>Ближайшая задача</h3>
+        <p id="nextTask">Нет задач</p>
+      </div>
+      <div class="dashboard-card">
+        <h3>События сегодня</h3>
+        <p id="calendarReminder">Нет событий</p>
+      </div>
+    </section>
+
+    <!-- Плитки меню -->
+    <nav class="menu">
+      <div class="menu-item" onclick="window.location.href='../family/family.html'">
+        <div class="icon">🏠</div>
+        <div class="label">Моя семья</div>
+      </div>
+      <div id="tasks" class="menu-item" onclick="window.location.href='../tasks/tasks.html'">
+        <div class="icon">🗂️</div>
+        <div class="label">Задачи</div>
+      </div>
+      <div id="calendar" class="menu-item" onclick="window.location.href='../events/calendar.html'">
+        <div class="icon">📅</div>
+        <div class="label">Календарь</div>
+      </div>
+      <!--    <div class="menu-item" onclick="window.location.href='shopping-list.html'">-->
+      <!--      <div class="icon">🛒</div>-->
+      <!--      <div class="label">Список покупок</div>-->
+      <!--    </div>-->
+      <!--    <div class="menu-item" onclick="window.location.href='statistics.html'">-->
+      <!--      <div class="icon">📊</div>-->
+      <!--      <div class="label">Статистика</div>-->
+      <!--    </div>-->
+      <div class="menu-item" onclick="window.location.href='../settings/settings.html'">
+        <div class="icon">⚙️</div>
+        <div class="label">Настройки</div>
+      </div>
+    </nav>
+
+  </div>
+
+</div>
+
+<script type="module" src="../../js/dashboard/dashboard.js"></script>
+<script type="module" src="../../js/main.js"></script>
+</body>
+</html>

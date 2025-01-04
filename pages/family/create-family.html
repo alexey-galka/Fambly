@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Создать семью</title>
+    <link rel="stylesheet" href="../../css/family/create-family.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/icons/favicon.ico">
+    <script>
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <button class="back-button" onclick="goToDashboard()">Назад</button>
+        <h3>Создать семью</h3>
+    </div>
+
+    <div>
+        <form id="createFamilyForm">
+            <label for="familyName">Имя семьи:</label>
+            <input type="text" id="familyName" name="familyName" required>
+            <button type="submit">Создать</button>
+        </form>
+    </div>
+
+</div>
+<script type="module" src="../../js/family/create-family.js"></script>
+<script type="module" src="../../js/main.js"></script>
+</body>
+</html>

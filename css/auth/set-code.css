@@ -1,0 +1,27 @@
+.container {
+    justify-content: space-between;
+}
+
+.password-display {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.password-display div {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--card-background-color-hover);
+}
+
+.password-display div.filled {
+    background-color: var(--accent-color);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}

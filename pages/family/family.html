@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Семья</title>
+  <link rel="stylesheet" href="../../css/family/family.css">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/icons/favicon.ico">
+  <script>
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  </script>
+</head>
+<body>
+<div class="container">
+  <!-- Верхняя панель -->
+  <div class="page-header">
+    <button class="back-button" onclick="goToDashboard()">Назад</button>
+    <h3 class="family-title">Семья</h3>
+    <button class="nav-btn" onclick="goToFamilySettings()">Настройки</button>
+  </div>
+
+  <div id="family-container">
+    <!-- Динамически будет добавляться информация о семье -->
+  </div>
+</div>
+
+<script type="module" src="../../js/family/family.js"></script>
+<script type="module" src="../../js/main.js"></script>
+</body>
+</html>

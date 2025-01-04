@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добро пожаловать в Fambly!</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/icons/favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <script>
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <div>
+        <header>
+            <h1>Fambly</h1>
+            <p>Решение для управления семейными задачами.</p>
+        </header>
+    </div>
+
+    <div>
+        <section class="features">
+            <h2>Возможности</h2>
+            <ul>
+                <li>Интуитивно понятный интерфейс не требующий особых навыков.</li>
+                <li>В реальном времени взаимодействуйте с семьей и отслеживайте задачи</li>
+                <li>Создавайте события и не пропустите ничего важного</li>
+            </ul>
+        </section>
+    </div>
+
+    <div>
+        <section class="actions">
+            <a href="pages/auth/sign-up.html" class="button">Регистрация</a>
+            <a href="pages/auth/sign-in.html" class="button">Вход</a>
+        </section>
+    </div>
+
+
+</div>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js')
+      .then((registration) => {
+        console.log('Сервис-воркер зарегистрирован:', registration);
+      })
+      .catch((error) => {
+        console.log('Ошибка регистрации сервис-воркера:', error);
+      });
+  }
+</script>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

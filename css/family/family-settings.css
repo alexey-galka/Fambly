@@ -1,0 +1,20 @@
+li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: var(--card-background-color);
+    color: var(--text-color);
+    border: var(--border-color);
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Кнопка удаления */
+.delete-button {
+    background-color: var(--delete-button-background-color);
+}
+
+.delete-button:hover {
+    background-color: var(--delete-button-hover-color);
+}

@@ -1,0 +1,123 @@
+.add-event-btn, .back-button {
+    width: 85px;
+}
+
+
+/* Заголовок календаря */
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.calendar-header h2 {
+    font-size: var(--h2-font-size);
+    color: var(--text-color);
+}
+
+/* Дни недели */
+.days-of-week {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+/* Сетка календаря */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.date {
+    background: var(--card-background-color);
+    border: var(--border-color);
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.date:hover {
+    background-color: var(--card-background-color-hover);
+    color: var(--text-color);
+}
+
+.date.today {
+    border: var(--border-color);
+    font-weight: 600;
+}
+
+.date.selected {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+}
+
+.date.selected:hover {
+    background-color: var(--button-hover-color);
+    color: var(--button-text-color);
+}
+
+/* Маркеры событий и задач */
+.marker-event {
+    width: 7px;
+    height: 7px;
+    background-color: var(--marker-event-color);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2px;
+    left: 2px;
+}
+
+.marker-task {
+    width: 7px;
+    height: 7px;
+    background-color: var(--marker-task-color);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+}
+
+.marker-birthday {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: var(--marker-birthday-color);
+    position: absolute;
+    bottom: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Лента событий */
+.event-list {
+    margin-top: 20px;
+    background: var(--background-color);
+    border: var(--border-color);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow-color);
+}
+
+.event-list ul {
+    margin: 10px;
+}
+
+.event-list li {
+    /*margin-bottom: 15px;*/
+    /*padding: 10px;*/
+    border: var(--border-color);
+    border-radius: 5px;
+    background: var(--card-background-color);
+    color: var(--small-font-size);
+}
+
+.event-list li:hover {
+    background-color: var(--card-background-color-hover);
+    color: var(--text-color);
+}

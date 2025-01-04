@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь</title>
+    <link rel="stylesheet" href="../../css/events/calendar.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/icons/favicon.ico">
+    <script>
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    </script>
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header">
+        <button class="back-button" onclick="goToDashboard()">Назад</button>
+        <h3>Календарь</h3>
+        <button id="addEventButton" class="add-event-btn" onclick="addNewEvent()">+</button>
+    </div>
+    <div class="calendar-header">
+        <button class="nav-btn" id="prevMonth">⟵</button>
+        <strong>
+            <p id="currentMonth"></p>
+        </strong>
+        <button class="nav-btn" id="nextMonth">⟶</button>
+    </div>
+    <div class="days-of-week">
+        <div>Пн</div>
+        <div>Вт</div>
+        <div>Ср</div>
+        <div>Чт</div>
+        <div>Пт</div>
+        <div>Сб</div>
+        <div>Вс</div>
+    </div>
+    <div class="calendar-grid" id="calendarGrid">
+        <!-- Календарь будет заполнен JavaScript -->
+    </div>
+    <div class="event-list">
+        <ul id="events"></ul>
+    </div>
+</div>
+<script type="module" src="../../js/events/calendar.js"></script>
+<script type="module" src="../../js/main.js"></script>
+</body>
+</html>

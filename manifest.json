@@ -1,0 +1,31 @@
+{
+  "name": "Fambly",
+  "short_name": "Fambly",
+  "theme_color": "#fefefe",
+  "background_color": "#3db8b5",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": ".",
+  "icons": [
+    {
+      "src": "/assets/images/ios/100.png",
+      "sizes": "100x100",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/ios/144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/ios/256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/images/ios/512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

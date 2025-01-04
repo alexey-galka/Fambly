@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../assets/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+
+/* Светлая тема */
+:root {
+    --background-color: #fefefe;
+    --background-color-disabled: #f5f5f5;
+    --text-color: #333333;
+    --accent-color: #3DB8B5;
+    --button-background-color: #7ED7A5;
+    --button-text-color: #ffffff;
+    --button-hover-color: #6FC497;
+    --font-family: 'Montserrat';
+    --card-background-color: #F9FAFB;
+    --card-background-color-hover: #E2E8F0;
+    --h1-font-size: 28px;
+    --h2-font-size: 23px;
+    --h3-font-size: 19px;
+    --font-size: 16px;
+    --small-font-size: 13px;
+    --box-shadow-color: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --max-width: 375px;
+    --border-bottom-color: 1px solid #7ED7A5;
+    --border-color: 1px solid #ddd;
+    --error-text-color: #E53E3E;
+    --tab-color: #A7F1EB;
+    --tab-color-hover: #58D6D0;
+    --tab-color-active: #00B4A1;
+    --delete-button-background-color: #E53E3E;
+    --delete-button-hover-color: #C53030;
+    --cancel-button-background-color: #6c757d;
+    --cancel-button-hover-color: #5a6268;
+    --marker-event-color: #34d058;
+    --marker-task-color: #ff4500;
+    --marker-birthday-color: #ff69b4;
+}
+
+/* Темная тема */
+[data-theme="dark"] {
+    --background-color: #181818;
+    --background-color-disabled: #2C2C2C;
+    --text-color: #EAEAEA;
+    --accent-color: #B08D57;
+    --button-background-color: #B08D57;
+    --button-text-color: #ffffff;
+    --button-hover-color: #9E7C47;
+    --font-family: 'Poppins', sans-serif;
+    --card-background-color: #2D2D2D;
+    --card-background-color-hover: #3A3A3A;
+    --h1-font-size: 28px;
+    --h2-font-size: 23px;
+    --h3-font-size: 19px;
+    --font-size: 16px;
+    --small-font-size: 13px;
+    --box-shadow-color: 0 4px 6px rgba(0, 0, 0, 0.6);
+    --max-width: 375px;
+    --border-bottom-color: 1px solid #B08D57;
+    --border-color: 1px solid #444;
+    --error-text-color: #E53E3E;
+
+    /* Цвета для вкладок */
+    --tab-color: #4A3624;
+    --tab-color-hover: #6A4F36;
+    --tab-color-active: #B08D57;
+    --delete-button-background-color: #8C3A2E;
+    --delete-button-hover-color: #732E25;
+    --cancel-button-background-color: #6F5E5E;
+    --cancel-button-hover-color: #5C4C4C;
+
+
+    /* Маркеры для событий и задач */
+    --marker-event-color: #4caf50;
+    --marker-task-color: #ff5722;
+    --marker-birthday-color: #e91e63;
+}
+
+
+
+/* Основные стили */
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 30px 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 15px;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    /*justify-content: flex-start;*/
+    align-items: center;
+}
+
+div {
+    width: 100%;
+}
+
+.page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: var(--max-width);
+    margin-bottom: 20px;
+}
+
+
+
+p {
+    font-size: var(--font-size);
+    color: var(--text-color);
+    /*margin-bottom: 20px;*/
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+    color: var(--text-color);
+    /*margin-bottom: 15px;*/
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: var(--font-size);
+    color: var(--text-color);
+}
+
+
+li {
+    margin: 10px 0;
+    padding: 0 10px;
+}
+
+
+button {
+    display: block;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    font-size: var(--font-size);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    color: var(--button-text-color);
+    cursor: pointer;
+}
+
+label {
+    display: block;
+    font-size: var(--font-size);
+    color: var(--text-color);
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: var(--border-color);
+    border-radius: 5px;
+    font-size: var(--font-size);
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--accent-color);
+    background-color: var(--background-color);
+    outline: none;
+    box-shadow: var(--box-shadow-color);
+}
+
+input:disabled {
+    background-color: var(--background-color-disabled);
+    color: var(--text-color);
+}
+
+
+button[type="submit"] {
+    width: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+
+
+
+/* Стили для формы */

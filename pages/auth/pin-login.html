@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/auth/set-code.css">
+    <title>Установка кода</title>
+    <link rel="icon" type="image/png" sizes="96x96" href="../../assets/images/icons/favicon.ico">
+    <script>
+      const savedTheme = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    </script>
+</head>
+<body>
+<div class="container">
+    <div class="page-header">
+        <button class="back-button" onclick="goBack()">Назад</button>
+<!--        <h2 id="formTitle">Введите код</h2>-->
+        <h2 id="formTitle">Введите код</h2>
+    </div>
+    <div class="password-display" id="passwordDisplay"></div>
+    <div class="buttons">
+        <button onclick="addDigit(1)">1</button>
+        <button onclick="addDigit(2)">2</button>
+        <button onclick="addDigit(3)">3</button>
+        <button onclick="addDigit(4)">4</button>
+        <button onclick="addDigit(5)">5</button>
+        <button onclick="addDigit(6)">6</button>
+        <button onclick="addDigit(7)">7</button>
+        <button onclick="addDigit(8)">8</button>
+        <button onclick="addDigit(9)">9</button>
+        <button onclick="clearPin()">C</button>
+        <button onclick="addDigit(0)">0</button>
+    </div>
+</div>
+
+
+
+
+<script type="module" src="../../js/main.js"></script>
+<script type="module" src="../../js/auth/pin-login.js"></script>
+</body>
+</html>

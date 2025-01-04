@@ -1,0 +1,23 @@
+.container {
+    justify-content: space-between;
+}
+
+.page-header {
+    justify-content: center;
+}
+
+.login-link {
+    text-align: center;
+    margin-top: 20px;
+    font-size: var(--font-size);
+}
+
+.login-link a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-link a:hover {
+    text-decoration: underline;
+}

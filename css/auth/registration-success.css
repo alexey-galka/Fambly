@@ -1,0 +1,27 @@
+body {
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+
+a.button {
+    width: 100%;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    text-decoration: none;
+    font-size: var(--font-size);
+    font-weight: 600;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+}
+
+a.button:hover {
+    background-color: var(--button-hover-color);
+}

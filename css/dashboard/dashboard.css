@@ -1,0 +1,152 @@
+.page-header {
+    margin-top: 20px;
+    flex-direction: column;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: var(--box-shadow-color);
+    padding-bottom: 10px;
+}
+
+.task_assigned {
+    font-size: var(--small-font-size);
+    background-color: var(--card-background-color-hover);
+    border-radius: 8px;
+    padding: 5px 0;
+    color: var(--text-color);
+    box-shadow: var(--box-shadow-color);
+    margin: 10px 10px;
+}
+
+#calendarReminder {
+    text-align: center;
+    width: 100%;
+    font-size: var(--small-font-size);
+    background-color: var(--card-background-color-hover);
+    border-radius: 8px;
+    padding: 5px 0;
+    color: var(--text-color);
+    box-shadow: var(--box-shadow-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Карточки с информацией */
+.dashboard-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    /*margin-bottom: 40px;*/
+    justify-content: space-between;
+    gap: 20px;
+}
+
+
+h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.dashboard-card {
+    background-color: var(--background-color);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow-color);
+    display: flex;
+    flex-direction: column;
+    /*flex: 1 1 calc(50% - 10px);*/
+    /*max-width: calc(50% - 10px);*/
+    box-sizing: border-box;
+}
+
+#calendarReminder ul li {
+    margin: 0 0 10px 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    width: 100%;
+}
+
+#calendarReminder ul li:last-child {
+    margin-bottom: 0;
+}
+
+.dashboard-card p {
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+}
+
+.dashboard-card li {
+    font-size: var(--small-font-size);
+    background-color: var(--card-background-color-hover);
+    border-radius: 8px;
+    padding: 5px;
+    /*margin-bottom: 10px;*/
+    color: var(--text-color);
+    box-shadow: var(--box-shadow-color);
+    display: flex;
+    align-items: center;
+    /*gap: 10px;*/
+}
+
+
+.nextTask {
+    font-size: var(--small-font-size);
+    background-color: var(--card-background-color-hover);
+    border-radius: 8px;
+    padding: 5px 0;
+    /*margin-top: 10px;*/
+    color: var(--text-color);
+    /*box-shadow: var(--box-shadow-color);*/
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*gap: 10px;*/
+}
+
+/* Плитки меню */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 20px;
+    width: 100%;
+    padding: 20px 0;
+    justify-items: center;
+    align-items: center;
+}
+
+.menu-item {
+    background-color: var(--card-background-color);
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: var(--box-shadow-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(90% - 10px);
+}
+
+.menu-item:hover {
+    box-shadow: var(--box-shadow-color);
+    background-color: var(--card-background-color-hover);
+}
+
+.menu-item .icon {
+    display: block;
+    text-align: center;
+    font-size: var(--h1-font-size);
+    margin-bottom: 10px;
+}
+
+.menu-item .label {
+    font-size: var(--font-size);
+    font-weight: 600;
+    text-align: center;
+}

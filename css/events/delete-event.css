@@ -1,0 +1,34 @@
+.actions {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+button:last-child {
+    margin-bottom: 0;
+}
+
+.confirm-btn {
+    background-color: var(--delete-button-background-color);
+    color: var(--button-text-color);
+}
+
+.confirm-btn:hover {
+    background-color: var(--delete-button-hover-color);
+    color: var(--button-text-color);
+}
+
+.cancel-btn {
+    background-color: var(--cancel-button-background-color);
+    color: var(--button-text-color);
+}
+
+.cancel-btn:hover {
+    background-color: var(--cancel-button-hover-color);
+    color: var(--button-text-color);
+}

@@ -1,0 +1,49 @@
+.task-section {
+    margin-bottom: 20px;
+}
+
+.accordion-header {
+    font-size: var(--font-size);
+    margin: 0;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-background-color-hover);
+    color: var(--button-text-color);
+    box-shadow: var(--box-shadow-color);
+}
+
+.accordion-header:hover {
+    background-color: var(--button-background-color);
+}
+
+.task-list.hidden {
+    display: none;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--card-background-color);
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow-color);
+}
+
+.task-item:hover {
+    background-color: var(--card-background-color-hover);
+    cursor: pointer;
+}
+
+.task-item h3 {
+    margin: 0;
+}
+
+.task-item p {
+    margin: 0;
+}
