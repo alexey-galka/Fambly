@@ -1,7 +1,8 @@
 const IP = '192.168.0.34';
 const PORT = '8000';
 
-export const URL = `http://${IP}:${PORT}`;
+// export const URL = `http://${IP}:${PORT}`;
+export const URL = 'https://a5c4-87-116-167-12.ngrok-free.app';
 
 // Ручки (эндпоинты) API
 export const API_AUTH = {
@@ -116,7 +117,7 @@ export async function apiRequest(endpoint, method, body = null, params = {}) {
       return null;
     }
 
-    const refreshResponse = await fetch('http://127.0.0.1:8000/auth/refresh', {
+    const refreshResponse = await fetch('http://192.168.0.34:8000/auth/refresh', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
