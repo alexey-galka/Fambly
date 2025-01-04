@@ -1,4 +1,4 @@
-const IP = '127.0.0.1';
+const IP = '192.168.0.34';
 const PORT = '8000';
 
 export const URL = `http://${IP}:${PORT}`;
