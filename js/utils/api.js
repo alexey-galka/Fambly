@@ -2,7 +2,7 @@ const IP = '192.168.0.34';
 const PORT = '8000';
 
 // export const URL = `http://${IP}:${PORT}`;
-export const URL = 'https://ddbd-87-116-167-12.ngrok-free.app';
+export const URL = 'https://fresh-tapir-really.ngrok-free.app';
 
 // Ручки (эндпоинты) API
 export const API_AUTH = {
